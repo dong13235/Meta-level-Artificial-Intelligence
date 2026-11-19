@@ -1,6 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<script>
+  // 仅当网址里没有带 ?noredirect 参数，且用户未手动切换过语言时触发
+  if (!sessionStorage.getItem('lang_manual') && navigator.language.toLowerCase().startsWith('zh')) {
+    sessionStorage.setItem('lang_manual', '1');
+    window.location.replace('./zh.html');
+  }
+	</script>
+	
 <title>Meta-Level Standard Implementation of the Field Domain Paradigm for Artificial Intelligence (English Edition).md</title>
 <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
 
